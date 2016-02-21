@@ -10,7 +10,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive \
 	bsd-mailx && \
 	apt-get autoremove && \
 	apt-get clean all && \
-	rm -rf /var/lib/apt/lists/*
+	rm -rf /var/lib/apt/lists/* && \
+	sed -i '/.*pam_loginuid.so.*/ s/^/# /' /etc/pam.d/cron
 
 COPY start.sh /usr/local/bin/start.sh
 
