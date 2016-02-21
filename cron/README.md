@@ -9,5 +9,6 @@ docker run -d \
 -v $HOME/nullmailer/adminaddr:/etc/nullmailer/adminaddr \
 -v $HOME/nullmailer/defaultdomain:/etc/nullmailer/defaultdomain \
 -v $HOME/nullmailer/remotes:/etc/nullmailer/remotes \
+-v $HOME/mycron:/etc/cron.d/mycron
 tinsjourney/cron
 ```
